@@ -1,7 +1,9 @@
-// 2 Installing Typescript Compiler in the project and system. Compile ts file using tsc.
-//console.log('Hello world');
-
-
-// 3. Compiling Typescript Code and compare the compiled Javascript code with typescript code
-
-
+var input1 = document.querySelector('#number1');
+var input2 = document.querySelector('#number2');
+var button = document.querySelector('#button');
+var add = function (number1, number2) {
+    return number1 + number2;
+};
+button.addEventListener('click', function () {
+    console.log(add(+input1.value, +input2.value));
+});
