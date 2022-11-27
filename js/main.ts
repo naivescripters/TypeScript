@@ -1,17 +1,16 @@
-let person: {
-    name: string;
-    age: number;
-    hobbies: string[];
-    role: [number, string];
-} = {
-    name: 'Hasan',
-    age: 27,
-    hobbies: ['sports', 'cooking'],
-    role: [2, 'author']
+enum ROLES {
+    ADMIN = 'ADMIN',
+    AUTHOR = 0,
+    GUEST = 10
 };
 
-person.role = [34, 'Hello'];
+let person = {
+    name: 'Hasan',
+    age: 31,
+    hobbies: ['sports', 'cooking'],
+    role: ROLES.ADMIN
+};
 
-for(let hobby of person.hobbies) {
-    console.log(hobby.toUpperCase());
+if(person.role === ROLES.ADMIN) {
+    console.log('user is admin');
 }
